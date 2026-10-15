@@ -1,0 +1,237 @@
+.bg-greenhouse {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
+                              url('https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .input-glass {
+            background: rgba(248, 250, 248, 0.9);
+            transition: all 0.25s ease;
+        }
+
+        .input-glass:focus-within {
+            background: #ffffff;
+            border-color: #2d6a4f;
+            box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.15);
+        }
+
+
+body {
+            background-color: #03140f;
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #03140f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0e4334;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00e699;
+        }
+
+        /* Toggle Switch UI */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 28px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #11382e;
+            transition: .3s;
+            border-radius: 34px;
+            border: 1px solid #1a5243;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background-color: #9ca3af;
+            transition: .3s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #00e699;
+            border-color: #00e699;
+        }
+        input:checked + .slider:before {
+            transform: translateX(22px);
+            background-color: #03140f;
+        }
+
+        /* Hero Image Overlay */
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(5,32,24,0.95) 0%, rgba(5,32,24,0.75) 50%, rgba(5,32,24,0.3) 100%);
+        }
+
+        .glow-green {
+            box-shadow: 0 0 15px rgba(0, 230, 153, 0.25);
+        }
+
+        /* Toast Message Container */
+        #toast-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* =====================================================
+            BACKGROUND FOTO SETIAP PAGE
+            DASHBOARD TIDAK DIUBAH
+            ===================================================== */
+
+            #page-sensor,
+            #page-tanah,
+            #page-dht11,
+            #page-kipas,
+            #page-pompa,
+            #page-grafik,
+            #page-riwayat,
+            #page-pengaturan {
+                position: relative;
+
+                margin: -24px;
+                padding: 24px;
+
+                width: calc(100% + 48px);
+                min-height: calc(100vh - 64px);
+
+                box-sizing: border-box;
+
+                border-radius: 0;
+
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+
+                overflow: hidden;
+            }
+
+            /* Lapisan gelap agar tulisan tetap mudah dibaca */
+            #page-sensor::before,
+            #page-tanah::before,
+            #page-dht11::before,
+            #page-kipas::before,
+            #page-pompa::before,
+            #page-grafik::before,
+            #page-riwayat::before,
+            #page-pengaturan::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+
+                background: rgba(3, 20, 15, 0.70);
+
+                z-index: 0;
+                pointer-events: none;
+            }
+
+            /* Semua isi page berada di atas foto */
+            #page-sensor > *,
+            #page-tanah > *,
+            #page-dht11 > *,
+            #page-kipas > *,
+            #page-pompa > *,
+            #page-grafik > *,
+            #page-riwayat > *,
+            #page-pengaturan > * {
+                position: relative;
+                z-index: 1;
+            }
+
+
+            /* =====================================================
+            FOTO SENSOR
+            ===================================================== */
+            #page-sensor {
+                background-image: url("https://i.ibb.co.com/TB5Vhwvy/images-3.jpg");
+            }
+
+
+            /* =====================================================
+            FOTO TANAH
+            ===================================================== */
+            #page-tanah {
+                background-image: url("https://i.ibb.co.com/qFyxt2XY/images-2.jpg");
+            }
+
+
+            /* =====================================================
+            FOTO DHT11
+            ===================================================== */
+            #page-dht11 {
+                background-image: url("background/dht11.jpg");
+            }
+
+
+            /* =====================================================
+            FOTO KIPAS
+            ===================================================== */
+            #page-kipas {
+                background-image: url("https://i.ibb.co.com/p6mjTsTf/Image-For-Article-1633-16697334671071295.webp");
+            }
+
+
+            /* =====================================================
+            FOTO POMPA
+            ===================================================== */
+            #page-pompa {
+                background-image: url("https://i.ibb.co.com/mVHjLwXS/Pivot-With-Drops.jpg");
+            }
+
+
+            /* =====================================================
+            FOTO GRAFIK
+            ===================================================== */
+            #page-grafik {
+                background-image: url("https://i.ibb.co.com/WZG2SVx/Adobe-Stock-320255673.avif");
+            }
+
+
+            /* =====================================================
+            FOTO RIWAYAT DATA
+            ===================================================== */
+            #page-riwayat {
+                background-image: url("https://i.ibb.co.com/Q39PwPsp/1617441916952.jpg");
+            }
+
+
+            /* =====================================================
+            FOTO PENGATURAN
+            ===================================================== */
+            #page-pengaturan {
+                background-image: url("https://i.ibb.co.com/Q39PwPsp/1617441916952.jpg");
+            }
+
+            
